@@ -1,8 +1,9 @@
 import os
 
+from elasticsearch import Elasticsearch
+
 from dotenv import load_dotenv
 from github import Github
-from elasticsearch import Elasticsearch
 
 dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
 load_dotenv(dotenv_path)
@@ -28,8 +29,9 @@ es = Elasticsearch([ES_URL])
 def ensure_index():
     es.indices.create(index=INDEX_NAME, ignore=400)
 
-def get_github_commits():
 
+def get_github_commits():
+    pass
 
 
 if __name__ == '__main__':
@@ -42,4 +44,3 @@ if __name__ == '__main__':
     print(r.__dict__)
     commits = r.get_commits()
     print(commits[0].__dict__)
-
