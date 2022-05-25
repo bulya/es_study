@@ -14,7 +14,7 @@ prompt-toolkit==1.0.15
 ptyprocess==0.5.2
 PyGithub==1.35
 Pygments==2.2.0
-PyJWT==1.5.2
+PyJWT==2.4.0
 python-dotenv==0.6.4
 requests==2.18.2
 simplegeneric==0.8.1
